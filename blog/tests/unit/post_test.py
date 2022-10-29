@@ -1,4 +1,13 @@
-from unittest import  TestCase
+from unittest import TestCase
+import sys
+import blog
+from post import Post
 
 class PostTest(TestCase):
-    pass
+    def test_create_post(self):
+        p=Post('Test','Test Content')
+
+        self.assertEqual('Test',p.title)
+        self.assertEqual('Test Content',p.content)
+
+
